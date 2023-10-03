@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="card container col-md-6 offset-md-3 mx-auto p-3">
+        <h3>Update Record</h3>
+        <hr>
+
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <a href="{% url 'home' %}" class="btn btn-secondary">back</a>
+            <button type="submit" class="btn btn-primary">Update Record</button>
+
+        </form>
+    </div>
+
+{% endblock %}
